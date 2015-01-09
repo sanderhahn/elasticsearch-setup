@@ -1,4 +1,4 @@
-# Ansible provisioning Elasticsearch Cluster
+# Elasticsearch Cluster using Ansible
 
 Install an Elasticsearch cluster on the machines in the hosts file, also installs the `marvel` and `cloud-aws` plugins. The production cluster is separate from the marvel monitoring cluster.
 
