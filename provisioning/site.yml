@@ -1,0 +1,17 @@
+- hosts: all
+  user: root
+  gather_facts: true
+  roles:
+  - common
+
+- hosts: node
+  user: root
+  gather_facts: true
+  roles:
+  - { role: elasticsearch, es_cluster_name: 'elasticsearch-cluster', es_marvel_agent_enabled: 'true', es_hosts: '{{ groups.node }}' }
+
+- hosts: marvel
+  user: root
+  gather_facts: true
+  roles:
+  - { role: elasticsearch, es_cluster_name: 'monitor-cluster', es_marvel_agent_enabled: 'false', es_hosts: '{{ groups.marvel }}' }

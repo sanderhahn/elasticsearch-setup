@@ -1,0 +1,7 @@
+- locale_gen: name={{locale}} state=present
+- lineinfile: dest=/etc/environment create=yes line=LC_ALL="{{locale}}" regexp=^LC_ALL=
+
+- name: set /etc/localtime to {{timezone}}
+  file: state=link src=/usr/share/zoneinfo/{{timezone}} path=/etc/localtime force=yes
+
+- template: src=hosts.j2 dest=/etc/hosts

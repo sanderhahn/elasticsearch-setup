@@ -1,0 +1,14 @@
+es1.appcraft.nl ansible_ssh_host=<ip-address>
+es2.appcraft.nl ansible_ssh_host=<ip-address>
+es3.appcraft.nl ansible_ssh_host=<ip-address>
+es-mon1.appcraft.nl ansible_ssh_host=<ip-address>
+es-mon2.appcraft.nl ansible_ssh_host=<ip-address>
+
+[node]
+es1.appcraft.nl
+es2.appcraft.nl
+es3.appcraft.nl
+
+[marvel]
+es-mon1.appcraft.nl
+es-mon2.appcraft.nl
